@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ECFA6A0D26D82B2200C821E9 /* CryptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A0C26D82B2200C821E9 /* CryptoAppApp.swift */; };
+		ECFA6A0D26D82B2200C821E9 /* CryptoTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A0C26D82B2200C821E9 /* CryptoTracker.swift */; };
 		ECFA6A0F26D82B2200C821E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A0E26D82B2200C821E9 /* ContentView.swift */; };
 		ECFA6A1126D82B2400C821E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFA6A1026D82B2400C821E9 /* Assets.xcassets */; };
 		ECFA6A1426D82B2400C821E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFA6A1326D82B2400C821E9 /* Preview Assets.xcassets */; };
@@ -15,6 +15,10 @@
 		ECFA6A1926D82B2400C821E9 /* CryptoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A1726D82B2400C821E9 /* CryptoApp.xcdatamodeld */; };
 		ECFA6A2426D82B2400C821E9 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A2326D82B2400C821E9 /* CryptoAppTests.swift */; };
 		ECFA6A2F26D82B2400C821E9 /* CryptoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A2E26D82B2400C821E9 /* CryptoAppUITests.swift */; };
+		ECFA6A3D26D848F500C821E9 /* CryptoSymbolsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A3C26D848F500C821E9 /* CryptoSymbolsRepository.swift */; };
+		ECFA6A4326D949B500C821E9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A4226D949B500C821E9 /* Constants.swift */; };
+		ECFA6A4526D9784400C821E9 /* CryptoTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A4426D9784400C821E9 /* CryptoTrackerViewModel.swift */; };
+		ECFA6A4726DD708F00C821E9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFA6A4626DD708F00C821E9 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		ECFA6A0926D82B2200C821E9 /* CryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECFA6A0C26D82B2200C821E9 /* CryptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppApp.swift; sourceTree = "<group>"; };
+		ECFA6A0C26D82B2200C821E9 /* CryptoTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTracker.swift; sourceTree = "<group>"; };
 		ECFA6A0E26D82B2200C821E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ECFA6A1026D82B2400C821E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECFA6A1326D82B2400C821E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		ECFA6A2A26D82B2400C821E9 /* CryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFA6A2E26D82B2400C821E9 /* CryptoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppUITests.swift; sourceTree = "<group>"; };
 		ECFA6A3026D82B2400C821E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFA6A3C26D848F500C821E9 /* CryptoSymbolsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSymbolsRepository.swift; sourceTree = "<group>"; };
+		ECFA6A4226D949B500C821E9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ECFA6A4426D9784400C821E9 /* CryptoTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerViewModel.swift; sourceTree = "<group>"; };
+		ECFA6A4626DD708F00C821E9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,17 @@
 		ECFA6A0B26D82B2200C821E9 /* CryptoApp */ = {
 			isa = PBXGroup;
 			children = (
-				ECFA6A0C26D82B2200C821E9 /* CryptoAppApp.swift */,
+				ECFA6A0C26D82B2200C821E9 /* CryptoTracker.swift */,
 				ECFA6A0E26D82B2200C821E9 /* ContentView.swift */,
 				ECFA6A1026D82B2400C821E9 /* Assets.xcassets */,
 				ECFA6A1526D82B2400C821E9 /* Persistence.swift */,
 				ECFA6A1A26D82B2400C821E9 /* Info.plist */,
 				ECFA6A1726D82B2400C821E9 /* CryptoApp.xcdatamodeld */,
 				ECFA6A1226D82B2400C821E9 /* Preview Content */,
+				ECFA6A3C26D848F500C821E9 /* CryptoSymbolsRepository.swift */,
+				ECFA6A4226D949B500C821E9 /* Constants.swift */,
+				ECFA6A4426D9784400C821E9 /* CryptoTrackerViewModel.swift */,
+				ECFA6A4626DD708F00C821E9 /* Models.swift */,
 			);
 			path = CryptoApp;
 			sourceTree = "<group>";
@@ -268,7 +280,11 @@
 				ECFA6A1926D82B2400C821E9 /* CryptoApp.xcdatamodeld in Sources */,
 				ECFA6A1626D82B2400C821E9 /* Persistence.swift in Sources */,
 				ECFA6A0F26D82B2200C821E9 /* ContentView.swift in Sources */,
-				ECFA6A0D26D82B2200C821E9 /* CryptoAppApp.swift in Sources */,
+				ECFA6A4526D9784400C821E9 /* CryptoTrackerViewModel.swift in Sources */,
+				ECFA6A0D26D82B2200C821E9 /* CryptoTracker.swift in Sources */,
+				ECFA6A3D26D848F500C821E9 /* CryptoSymbolsRepository.swift in Sources */,
+				ECFA6A4326D949B500C821E9 /* Constants.swift in Sources */,
+				ECFA6A4726DD708F00C821E9 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 58GH6VJ4C3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -448,6 +465,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CryptoApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 58GH6VJ4C3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CryptoApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

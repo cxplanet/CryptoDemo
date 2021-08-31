@@ -8,7 +8,8 @@
 import SwiftUI
 
 @main
-struct CryptoAppApp: App {
+struct CryptoTracker: App {
+    // todo - store symbol api call in coredata
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
