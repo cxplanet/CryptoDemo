@@ -125,9 +125,11 @@ struct APIResponse: Codable {
 }
 
 struct SymbolPrice : Codable{
+    public var symbol: String
     public var currPrice: Float
     
     enum CodingKeys: String, CodingKey {
+        case symbol = "s"
         case currPrice = "p"
     }
 }
