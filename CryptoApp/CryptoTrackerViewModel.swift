@@ -20,7 +20,6 @@ class CryptoTrackerViewModel : ObservableObject {
     private let baseURL = URL(string: Api.SYMBOL_REALTIME_ENDPOINT)!
     
     @Published var errorMessage: String = ""
-    @Published var isLoading: Bool = false
     
     // subscribe to the current symbol when set
     @Published var currentSymbol: String = "" {
@@ -54,18 +53,19 @@ class CryptoTrackerViewModel : ObservableObject {
     }
 
     func connect() {
-
         webSocketTask = urlSession.webSocketTask(with: baseURL)
         webSocketTask?.resume()
-
     }
     
     func disconnect() {
         webSocketTask?.cancel(with: .normalClosure, reason: nil)
+        DispatchQueue.main.async{
+            self.price = ""
+        }
+        
     }
     
     func subscribe() {
-        isLoading = true
         disconnect()
         // just keeping it simple, instead of using the json encoder
         let subscribeMessage = BinanceSubscribeRequest(symbol: currentSymbol)
